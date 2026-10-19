@@ -1357,3 +1357,55 @@ button:focus-visible {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Disposition horizontale de la formation */
+.education-card {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  align-items: center;
+  gap: 32px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.education-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 150px;
+  padding: 12px;
+}
+
+.education-logo img {
+  display: block;
+  width: 100%;
+  max-width: 130px;
+  height: 130px;
+  object-fit: contain;
+}
+
+.education-content {
+  min-width: 0;
+}
+
+.education-content h3 {
+  margin-top: 10px;
+}
+
+@media (max-width: 600px) {
+  .education-card {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .education-logo {
+    min-height: auto;
+    justify-content: flex-start;
+    padding: 0;
+  }
+
+  .education-logo img {
+    width: 90px;
+    height: 90px;
+  }
+}
